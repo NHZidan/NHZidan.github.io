@@ -64,108 +64,84 @@ button { font: inherit; }
 .menu-toggle { display: none; background: none; border: 0; color: var(--text); }
 .menu-toggle span:not(.sr-only) { display: block; width: 23px; height: 2px; background: currentColor; margin: 5px 0; }
 
-
 .hero {
-  min-height: auto;
-  display: block;
-  padding-top: 48px;
-  padding-bottom: 10px;
+  min-height: calc(100vh - 76px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+  padding-top: 55px;
+  padding-bottom: 80px;
 }
-.hero-banner {
-  width: 100%;
+.hero-copy { max-width: 650px; }
+.hero h1 {
+  font-size: clamp(54px, 6vw, 88px);
+  line-height: .94;
+  letter-spacing: -.065em;
+  margin: 23px 0;
+}
+.hero h1 span { color: var(--muted); }
+.hero-role { font-size: 18px; color: #d9dee5; margin-bottom: 18px; }
+.hero-role b { color: var(--accent); margin: 0 7px; }
+.hero-text { max-width: 610px; color: var(--muted); font-size: 16px; }
+.hero-actions { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
+.hero-visual { position: relative; max-width: 610px; justify-self: end; width: 100%; }
+.hero-image {
+  position: relative;
   overflow: hidden;
   border: 1px solid var(--line);
   background: #07111a;
-  box-shadow: 0 30px 90px rgba(0,0,0,.30);
+  box-shadow: 0 30px 90px rgba(0,0,0,.38);
+  aspect-ratio: 4 / 5;
 }
-.hero-banner img {
-  display: block;
+.hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(7,17,26,.10), transparent 50%, rgba(185,255,74,.10));
+  pointer-events: none;
+}
+.hero-image img {
   width: 100%;
-  height: auto;
-  max-height: 760px;
+  height: 100%;
+  display: block;
   object-fit: cover;
+  object-position: 60% center;
 }
-.hero-controls {
+.hero-image-label {
+  position: absolute;
+  left: 22px;
+  bottom: 22px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 35px;
-  padding: 28px 0 10px;
-  border-bottom: 1px solid var(--line);
+  gap: 12px;
+  padding: 10px 14px;
+  background: rgba(7,11,16,.78);
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(12px);
 }
-.hero-controls-text {
-  color: var(--muted);
-  margin-top: 6px;
-  font-size: 14px;
+.hero-image-label span {
+  color: var(--accent);
+  font: 500 13px 'DM Mono', monospace;
 }
-.hero .hero-actions { margin-top: 0; }
-
-@media (max-width: 720px) {
-  .hero { padding-top: 25px; }
-  .hero-controls { align-items: flex-start; flex-direction: column; }
-  .hero .hero-actions { width: 100%; }
+.hero-image-label small {
+  color: #e7ebef;
+  font: 500 9px 'DM Mono', monospace;
+  letter-spacing: .10em;
 }
-
-.hero {
-  min-height: calc(100vh - 76px);
-  display: grid; grid-template-columns: 1.12fr .88fr; align-items: center;
-  gap: 80px; padding-top: 70px; padding-bottom: 90px;
+.hero-note {
+  position: absolute;
+  right: -20px;
+  top: 34px;
+  color: #aeb8c5;
+  font: italic 17px/1.05 Georgia, serif;
+  transform: rotate(-7deg);
+  text-align: left;
 }
-.eyebrow {
-  display: flex; align-items: center; gap: 10px;
-  color: var(--accent); font: 500 11px 'DM Mono', monospace;
-  letter-spacing: .12em; text-transform: uppercase;
-}
-.dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 18px var(--accent); }
-.hero h1 {
-  font-size: clamp(52px, 7vw, 96px); line-height: .94;
-  letter-spacing: -.065em; margin: 23px 0;
-}
-.hero h1 span, .section-heading h2 span, .contact-section h2 span { color: var(--muted); }
-.hero-role { font-size: 18px; color: #d9dee5; margin-bottom: 18px; }
-.hero-role b { color: var(--accent); margin: 0 7px; }
-.hero-text { max-width: 660px; color: var(--muted); font-size: 16px; }
-.hero-actions { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
-.btn {
-  display: inline-flex; align-items: center; gap: 12px; padding: 13px 18px;
-  border: 1px solid var(--line); font-size: 13px; font-weight: 800;
-  transition: transform .25s, border-color .25s, background .25s;
-}
-.btn:hover { transform: translateY(-2px); border-color: rgba(185,255,74,.5); }
-.btn-primary { color: #10130b; background: var(--accent); border-color: var(--accent); }
-.btn-secondary { background: rgba(255,255,255,.025); }
+.hero-note em { color: var(--accent); }
 .quick-links { display: flex; gap: 22px; margin-top: 24px; }
 .quick-links a { color: #7f8794; font: 500 11px 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .08em; }
 .quick-links a:hover { color: var(--accent); }
-
-.hero-card {
-  min-height: 480px; position: relative; overflow: hidden;
-  background: linear-gradient(145deg, #151922, #0d1015);
-  border: 1px solid var(--line); padding: 42px;
-  display: flex; flex-direction: column; justify-content: flex-end;
-  box-shadow: 0 30px 80px rgba(0,0,0,.28);
-}
-.hero-card::after {
-  content: ""; position: absolute; width: 300px; height: 300px; border-radius: 50%;
-  top: -80px; right: -60px; background: var(--accent-soft); filter: blur(5px);
-}
-.profile-badge {
-  position: absolute; top: 48px; left: 48px; width: 106px; height: 106px;
-  border-radius: 50%; display: grid; place-items: center; z-index: 2;
-  border: 1px solid rgba(185,255,74,.42); background: rgba(185,255,74,.08);
-  box-shadow: 0 0 60px rgba(185,255,74,.09);
-}
-.profile-badge span { font: 500 27px 'DM Mono', monospace; color: var(--accent); }
-.orbit { position: absolute; border: 1px solid rgba(255,255,255,.07); border-radius: 50%; }
-.orbit-one { width: 390px; height: 390px; top: -145px; right: -90px; }
-.orbit-two { width: 510px; height: 510px; top: -205px; right: -150px; }
-.card-kicker { position: relative; z-index: 2; color: var(--accent); font: 500 10px 'DM Mono', monospace; letter-spacing: .16em; margin-bottom: 12px; }
-.hero-card h2 { position: relative; z-index: 2; font-size: clamp(34px, 4vw, 48px); line-height: 1.03; letter-spacing: -.05em; }
-.hero-card h2 em { color: var(--accent); font-style: normal; }
-.mini-stats { position: relative; z-index: 2; display: flex; gap: 32px; border-top: 1px solid var(--line); margin-top: 34px; padding-top: 18px; }
-.mini-stats div { display: grid; gap: 3px; }
-.mini-stats strong { font: 500 18px 'DM Mono', monospace; }
-.mini-stats span { color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: .08em; }
 
 .section { padding: 120px 0 20px; }
 .section-heading { display: grid; grid-template-columns: 180px 1fr; gap: 30px; margin-bottom: 55px; }
@@ -236,7 +212,6 @@ button { font: inherit; }
 
 @media (max-width: 980px) {
   .hero { grid-template-columns: 1fr; gap: 50px; }
-  .hero-card { min-height: 390px; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
   .projects { grid-template-columns: 1fr; }
   .project-card { min-height: 340px; }
@@ -254,10 +229,10 @@ button { font: inherit; }
   }
   .nav-links.open { display: flex; }
   .nav-links a { padding: 14px; border-bottom: 1px solid var(--line); }
-  .hero { min-height: auto; padding-top: 70px; padding-bottom: 70px; }
+  .hero { min-height: auto; grid-template-columns: 1fr; gap: 45px; padding-top: 65px; padding-bottom: 70px; }
   .hero h1 { font-size: clamp(49px, 15vw, 72px); }
-  .hero-card { min-height: 380px; padding: 28px; }
-  .profile-badge { top: 30px; left: 30px; }
+  .hero-visual { max-width: 560px; justify-self: start; }
+  .hero-note { right: 8px; }
   .section { padding-top: 90px; }
   .section-heading { grid-template-columns: 1fr; gap: 15px; margin-bottom: 38px; }
   .about-grid, .contact-inner { grid-template-columns: 1fr; gap: 35px; }
@@ -305,18 +280,34 @@ button { font: inherit; }
 
   <main>
     <section class="hero container" id="home">
-      <div class="hero-banner reveal">
-        <img src="hero-portfolio.png" alt="MD. Nabil Hossain Zidan — Computer Engineer portfolio hero">
-      </div>
-      <div class="hero-controls reveal">
-        <div>
-          <p class="eyebrow"><span class="dot"></span> Welcome to my portfolio</p>
-          <p class="hero-controls-text">Explore my background, skills, projects and professional experience.</p>
-        </div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="dot"></span> Build · Learn · Grow</p>
+        <h1>MD. Nabil<br><span>Hossain Zidan</span></h1>
+        <p class="hero-role">Computer Engineer <b>·</b> IT &amp; Office Professional</p>
+        <p class="hero-text">
+          Building practical solutions with a focus on technology, organization,
+          and continuous learning.
+        </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">View Projects <span>↗</span></a>
+          <a class="btn btn-primary" href="#projects">View My Projects <span>↗</span></a>
           <a class="btn btn-secondary" href="MD_Nabil_Hossain_Zidan_CV.pdf" download>Download CV <span>↓</span></a>
         </div>
+        <div class="quick-links">
+          <a href="mailto:nabilhossainzidan01@gmail.com">Email</a>
+          <a href="https://github.com/NHZidan" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/nabilhossainzidan/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="hero-image">
+          <img src="hero-portrait.jpg" alt="Professional portrait of MD. Nabil Hossain Zidan">
+          <div class="hero-image-label">
+            <span>NZ</span>
+            <small>COMPUTER ENGINEER</small>
+          </div>
+        </div>
+        <div class="hero-note">Better<br><em>Solutions Together</em></div>
       </div>
     </section>
 
