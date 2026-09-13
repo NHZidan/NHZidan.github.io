@@ -64,6 +64,48 @@ button { font: inherit; }
 .menu-toggle { display: none; background: none; border: 0; color: var(--text); }
 .menu-toggle span:not(.sr-only) { display: block; width: 23px; height: 2px; background: currentColor; margin: 5px 0; }
 
+
+.hero {
+  min-height: auto;
+  display: block;
+  padding-top: 48px;
+  padding-bottom: 10px;
+}
+.hero-banner {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #07111a;
+  box-shadow: 0 30px 90px rgba(0,0,0,.30);
+}
+.hero-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 760px;
+  object-fit: cover;
+}
+.hero-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  padding: 28px 0 10px;
+  border-bottom: 1px solid var(--line);
+}
+.hero-controls-text {
+  color: var(--muted);
+  margin-top: 6px;
+  font-size: 14px;
+}
+.hero .hero-actions { margin-top: 0; }
+
+@media (max-width: 720px) {
+  .hero { padding-top: 25px; }
+  .hero-controls { align-items: flex-start; flex-direction: column; }
+  .hero .hero-actions { width: 100%; }
+}
+
 .hero {
   min-height: calc(100vh - 76px);
   display: grid; grid-template-columns: 1.12fr .88fr; align-items: center;
@@ -241,9 +283,9 @@ button { font: inherit; }
 
   <header class="site-header">
     <nav class="nav container" aria-label="Primary navigation">
-      <a class="brand" href="#home" aria-label="MD. Nabil Hossain home">
-        <span class="brand-mark">NHZ</span>
-        <span>MD. Nabil Hossain Zidan</span>
+      <a class="brand" href="#home" aria-label="Nabil Zidan home">
+        <span class="brand-mark">NZ</span>
+        <span>Nabil Zidan</span>
       </a>
 
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
@@ -263,38 +305,17 @@ button { font: inherit; }
 
   <main>
     <section class="hero container" id="home">
-      <div class="hero-copy reveal">
-        <p class="eyebrow"><span class="dot"></span> Open to opportunities</p>
-        <h1>MD. Nabil<br><span>Hossain Zidan</span></h1>
-        <p class="hero-role">Computer Engineer <b>·</b> IT &amp; Office Professional</p>
-        <p class="hero-text">
-          A motivated and responsible professional with a strong academic background,
-          a willingness to learn, and a practical approach to technology, organization,
-          and problem solving.
-        </p>
+      <div class="hero-banner reveal">
+        <img src="hero-portfolio.png" alt="MD. Nabil Hossain Zidan — Computer Engineer portfolio hero">
+      </div>
+      <div class="hero-controls reveal">
+        <div>
+          <p class="eyebrow"><span class="dot"></span> Welcome to my portfolio</p>
+          <p class="hero-controls-text">Explore my background, skills, projects and professional experience.</p>
+        </div>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#projects">View Projects <span>↗</span></a>
           <a class="btn btn-secondary" href="MD_Nabil_Hossain_Zidan_CV.pdf" download>Download CV <span>↓</span></a>
-        </div>
-        <div class="quick-links">
-          <a href="mailto:nabilhossainzidan01@gmail.com">Email</a>
-          <a href="https://github.com/NHZidan" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/nabilhossainzidan/" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </div>
-
-      <div class="hero-card reveal">
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
-        <div class="profile-badge">
-          <span>NHZ</span>
-        </div>
-        <p class="card-kicker">COMPUTER ENGINEER</p>
-        <h2>Technology.<br>Organization.<br><em>Growth.</em></h2>
-        <div class="mini-stats">
-          <div><strong>03</strong><span>Projects</span></div>
-          <div><strong>2023</strong><span>Graduated</span></div>
-          <div><strong>01</strong><span>Goal: Grow</span></div>
         </div>
       </div>
     </section>
