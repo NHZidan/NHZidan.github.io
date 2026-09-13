@@ -1,82 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of MD. Nabil Hossain Zidan — Computer Engineer and IT & Office Professional.">
+  <meta name="theme-color" content="#0b0d12">
   <title>MD. Nabil Hossain Zidan | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header>
-    <h1>MD. Nabil Hossain Zidan</h1>
-    <p>Computer Engineer</p>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Nabil Zidan home">
+        <span class="brand-mark">NZ</span>
+        <span>Nabil Zidan</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
   </header>
 
-  <div class="container">
-    <section>
-      <h2>Summary</h2>
-      <div>
-        <p>I am a competent, self-motivated, and diligent young undergraduate who can understand tasks and complete them assiduously using my technical skills. I aim to enhance my skills in a dynamic organization that values growth and professionalism.</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Projects</h2>
-
-      <div class="project">
-        <h3>E-Commerce Website (Sep - Nov 2023)</h3>
-        <p>Fully functional site with product catalog, user authentication, secure payment, and responsive design.</p>
-        <p><strong>Tech:</strong> PHP (Laravel), HTML, CSS, MySQL</p>
-      </div>
-
-      <div class="project">
-        <h3>Healthcare Android App (Jan - May 2022)</h3>
-        <p>Features symptom tracking, medication reminders, appointment scheduling, and resource access.</p>
-        <p><strong>Tech:</strong> Android, Java</p>
-      </div>
-
-      <div class="project">
-        <h3>Blood Bank Management System (Sept - Nov 2021)</h3>
-        <p>Includes donor registration, inventory management, and blood distribution tracking.</p>
-        <p><strong>Tech:</strong> Java, MySQL</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Education</h2>
-      <div class="education">
-        <p><strong>B.Sc. in CSE</strong> — BUBT (2019–2023), CGPA: 2.94/4.00</p>
-        <p><strong>HSC</strong> — Ideal College, CGPA: 3.42/5.00</p>
-        <p><strong>SSC</strong> — Hazrat Shah Ali Model High School, CGPA: 4.78/5.00</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Skills</h2>
-      <div class="skills">
-        <ul>
-          <li>Languages: C, C++, HTML, CSS, Python</li>
-          <li>Database: MySQL</li>
-          <li>Frameworks: Laravel</li>
-          <li>Android Development</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <h2>Contact</h2>
-      <div class="contact">
-        <p class="contact-info">
-          📧 <a href="mailto:nabilhossainzidan01@gmail.com">nabilhossainzidan01@gmail.com</a><br>
-          📞 +8801852224855<br>
-          💼 <a href="https://github.com/NHZidan" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/nabilhossainzidan" target="_blank">LinkedIn</a>
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="dot"></span> Open to opportunities</p>
+        <h1>MD. Nabil<br><span>Hossain Zidan</span></h1>
+        <p class="hero-role">Computer Engineer <b>·</b> IT &amp; Office Professional</p>
+        <p class="hero-text">
+          A motivated and responsible professional with a strong academic background,
+          a willingness to learn, and a practical approach to technology, organization,
+          and problem solving.
         </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View Projects <span>↗</span></a>
+          <a class="btn btn-secondary" href="MD_Nabil_Hossain_Zidan_CV.pdf" download>Download CV <span>↓</span></a>
+        </div>
+        <div class="quick-links">
+          <a href="mailto:nabilhossainzidan01@gmail.com">Email</a>
+          <a href="https://github.com/NHZidan" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/nabilhossainzidan/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="hero-card reveal">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="profile-badge">
+          <span>NZ</span>
+        </div>
+        <p class="card-kicker">COMPUTER ENGINEER</p>
+        <h2>Technology.<br>Organization.<br><em>Growth.</em></h2>
+        <div class="mini-stats">
+          <div><strong>03</strong><span>Projects</span></div>
+          <div><strong>2023</strong><span>Graduated</span></div>
+          <div><strong>01</strong><span>Goal: Grow</span></div>
+        </div>
       </div>
     </section>
-  </div>
-</body>
 
+    <section class="section container" id="about">
+      <div class="section-heading reveal">
+        <p class="eyebrow">01 / About</p>
+        <h2>Ready to learn,<br><span>ready to contribute.</span></h2>
+      </div>
+      <div class="about-grid">
+        <p class="about-lead reveal">
+          I am a Computer Science &amp; Engineering graduate with an interest in both
+          technology and professional office environments. I enjoy learning new tools,
+          working with people, organizing tasks, and solving practical problems.
+        </p>
+        <div class="about-copy reveal">
+          <p>
+            My approach is simple: understand the task, stay organized, communicate clearly,
+            and complete responsibilities with dedication and professionalism.
+          </p>
+          <p>
+            I am currently looking for an opportunity where I can contribute to a dynamic
+            organization while developing my experience and building a successful career.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="skills">
+      <div class="section-heading reveal">
+        <p class="eyebrow">02 / Skills</p>
+        <h2>Practical skills for<br><span>the workplace.</span></h2>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card reveal">
+          <span class="skill-number">01</span>
+          <h3>Office &amp; Computer</h3>
+          <ul>
+            <li>MS Word, Excel &amp; PowerPoint</li>
+            <li>Email &amp; Internet Applications</li>
+            <li>Data Entry &amp; Document Management</li>
+            <li>Basic Computer Troubleshooting</li>
+          </ul>
+        </article>
+
+        <article class="skill-card reveal">
+          <span class="skill-number">02</span>
+          <h3>IT &amp; Technical</h3>
+          <ul>
+            <li>Basic Web &amp; Software Knowledge</li>
+            <li>Database Fundamentals</li>
+            <li>Technical Documentation</li>
+            <li>Basic IT Troubleshooting</li>
+          </ul>
+        </article>
+
+        <article class="skill-card reveal">
+          <span class="skill-number">03</span>
+          <h3>Professional</h3>
+          <ul>
+            <li>Communication &amp; Interpersonal Skills</li>
+            <li>Teamwork &amp; Collaboration</li>
+            <li>Time Management</li>
+            <li>Problem Solving &amp; Attention to Detail</li>
+            <li>Adaptability &amp; Quick Learning</li>
+          </ul>
+        </article>
+
+        <article class="skill-card highlight reveal">
+          <span class="skill-number">04</span>
+          <h3>Work Ability</h3>
+          <p>Ability to work under pressure and handle responsibilities with dedication and professionalism.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="projects">
+      <div class="section-heading reveal">
+        <p class="eyebrow">03 / Selected Work</p>
+        <h2>Projects that shaped<br><span>my foundation.</span></h2>
+      </div>
+
+      <div class="projects">
+        <article class="project-card reveal">
+          <div class="project-top">
+            <span class="project-index">01</span>
+            <span class="project-date">SEP — NOV 2023</span>
+          </div>
+          <h3>E-Commerce Website</h3>
+          <p>
+            A capstone project focused on product catalog management, user authentication,
+            secure payment processing, and responsive design.
+          </p>
+          <div class="tags">
+            <span>PHP / Laravel</span><span>HTML</span><span>CSS</span><span>MySQL</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-top">
+            <span class="project-index">02</span>
+            <span class="project-date">JAN — MAY 2022</span>
+          </div>
+          <h3>Healthcare Android App</h3>
+          <p>
+            An Android application designed around symptom tracking, medication reminders,
+            appointment scheduling, and access to healthcare resources.
+          </p>
+          <div class="tags">
+            <span>Android</span><span>Java</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-top">
+            <span class="project-index">03</span>
+            <span class="project-date">SEP — NOV 2021</span>
+          </div>
+          <h3>Blood Bank Management System</h3>
+          <p>
+            A management system covering donor registration, inventory management,
+            and blood distribution tracking.
+          </p>
+          <div class="tags">
+            <span>Java</span><span>MySQL</span>
+          </div>
+        </article>
+      </div>
+      <p class="project-note reveal">
+        Project technologies are listed as historical project experience; current skill levels may vary.
+      </p>
+    </section>
+
+    <section class="section container" id="education">
+      <div class="section-heading reveal">
+        <p class="eyebrow">04 / Education</p>
+        <h2>Academic<br><span>background.</span></h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <div class="timeline-year">2019—2023</div>
+          <div>
+            <h3>Bachelor of Science in Computer Science &amp; Engineering</h3>
+            <p>Bangladesh University of Business and Technology (BUBT)</p>
+            <span>CGPA 2.94 / 4.00</span>
+          </div>
+        </article>
+        <article class="timeline-item reveal">
+          <div class="timeline-year">2016—2018</div>
+          <div>
+            <h3>Higher Secondary Certificate</h3>
+            <p>Ideal College, Dhanmondi</p>
+            <span>GPA 3.42 / 5.00</span>
+          </div>
+        </article>
+        <article class="timeline-item reveal">
+          <div class="timeline-year">2014—2016</div>
+          <div>
+            <h3>Secondary School Certificate</h3>
+            <p>Hazrat Shah Ali Model High School</p>
+            <span>GPA 4.78 / 5.00</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container contact-inner">
+        <div class="reveal">
+          <p class="eyebrow">05 / Contact</p>
+          <h2>Let's build the<br><span>next chapter.</span></h2>
+          <p class="contact-intro">
+            If you're looking for someone responsible, adaptable, and eager to grow,
+            I'd be glad to connect.
+          </p>
+        </div>
+
+        <div class="contact-list reveal">
+          <a href="mailto:nabilhossainzidan01@gmail.com">
+            <small>EMAIL</small>
+            <strong>nabilhossainzidan01@gmail.com</strong>
+          </a>
+          <a href="tel:+8801852224855">
+            <small>PHONE</small>
+            <strong>+880 1852 224855</strong>
+          </a>
+          <a href="https://github.com/NHZidan" target="_blank" rel="noopener">
+            <small>GITHUB</small>
+            <strong>github.com/NHZidan</strong>
+          </a>
+          <a href="https://www.linkedin.com/in/nabilhossainzidan/" target="_blank" rel="noopener">
+            <small>LINKEDIN</small>
+            <strong>linkedin.com/in/nabilhossainzidan</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <span>© <span id="year"></span> MD. Nabil Hossain Zidan</span>
+    <span>Designed &amp; built with purpose.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
