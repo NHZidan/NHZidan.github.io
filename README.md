@@ -1,12 +1,10 @@
 # MD. Nabil Hossain Zidan — Portfolio
 
-A rebuilt, responsive personal portfolio for GitHub Pages.
+A real responsive portfolio with live HTML sections and a custom hero portrait derived from the supplied cinematic portfolio artwork.
 
-## Files
-- `index.html` — page structure and content
-- `style.css` — responsive visual design
-- `script.js` — mobile navigation, reveal animations, and current year
-- `MD_Nabil_Hossain_Zidan_CV.pdf` — downloadable CV
+Upload these files to the root of `NHZidan.github.io`:
+- `index.html`
+- `hero-portrait.jpg`
+- `MD_Nabil_Hossain_Zidan_CV.pdf`
 
-## Deploy
-Upload these files to the root of the `NHZidan.github.io` repository. GitHub Pages can then serve `index.html` from the repository root.
+The page contains the full interactive portfolio; the hero artwork is used as the visual portrait, not as a screenshot of the entire page.
